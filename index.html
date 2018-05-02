@@ -85,8 +85,28 @@
   <pre>
     <h3 class="myClass">Example Header</h3>
   </pre>
-  Now, just this one 'h3' element will have a gray background and blue text!
-
+  Now, just this one 'h3' element will have a gray background and blue text! Not only that, <em>any</em> element that is given the class "myClass" will have a gray background and blue text.
   </p>
+  <p>Let's practice this. First, create a class in 'style.css'.  It can be called anything you like. Your name, your favorite color, etc..</p>
+  <p>Next, add some declarations. If you're not sure what to add, try some or all of the following, and feel free to change the values:</p>
+  <pre>
+    .anExampleClass {
+      font-size: 300%;
+      background-color: lightgreen;
+      font-family: courier;
+      border: 1px dotted red;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      transition: rotate(-30)deg;
+    }
+  </pre>
+  <p>Finally, with our class declarations created, we need to assign this class to elements in index.html</p>
+  <p>Open index.html in your IDE, choose some HTML elements and add 'class=' followed by the name of your new class, in quotes. Maybe try adding a class to the `h1` and `h2` elements at the top of the page.</p>
+  <p>Save the work you've done, and refresh this page.  The elements you've selected should display the styling you've declared.</p>
+  <br>
+  <p>Using an id for styling works the same way, with only two main differences. Instead of '.' at the start of the class name in our CSS file, we use '#'. Also, when assigning to an HTML eleemnt, instead of typing 'class="myClass"', you would write:</p>
+  <pre>
+    <h1 id="myHeaderId">Header!</h1>
+  </pre>
 </body>
 </html>
