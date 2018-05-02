@@ -1,0 +1,88 @@
+/* optional examples, not required for review or code along*/
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+ul {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+  list-style-type: none;
+
+}
+
+li {
+  width: 90%;
+  height: 70px;
+}
+.font-style {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  color: blue;
+  font-weight: bold;
+  text-shadow: 10px 10px rgba(0,0,0,0.1)
+}
+.text-size {
+  font-size: 200%;
+}
+.background {
+  background: linear-gradient(red, yellow);
+}
+.borders {
+  border: 3px dashed red;
+}
+.page-layout {
+  display: flex;
+  flex-flow: column;
+  box-shadow: inset 0 0 10px #000000;
+  padding: 5px;
+}
+.page-layout div {
+  display: flex;
+}
+.page-layout div div {
+  width: 100%;
+  border: 1px;
+}
+.margins {
+  margin: 15px 0 0 15px;
+  padding: 5px;
+  background: lightgrey;
+  box-shadow: -15px -15px 5px rgba(0,0,0,0.05);
+}
+.rounding-edges {
+  border-radius: 10px;
+  background: violet;
+  padding: 4px;
+}
+.more {
+  font-size: 200%;
+  font-family: fantasy;
+  animation: animationFrames linear 300s;
+  animation-iteration-count: infinite;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  line-height: 70px;
+  text-align: center;
+}
+
+@keyframes animationFrames{
+  0% {
+    transform:  rotate(360deg) ;
+    opacity: 1;
+    color: red;
+    background-color: white;
+  }
+  50% {
+    opacity: 0;
+    color: blue;
+    background-color: yellow;
+  }
+  100% {
+    transform:  rotate(0deg) ;
+    opacity: 1;
+    color: red;
+    background-color: white;
+  }
+}
+
+body {
+  margin: 0 10%;
+}

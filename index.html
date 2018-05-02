@@ -2,62 +2,91 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/preset/preset.css">
+  <!-- Put CSS Link here!-->
   <title>CSS Practice</title>
 </head>
 <body>
 	<div id="title-section">
     <h1>The Ultimate CSS Walkthrough</h1>
     <h2>An Introduction to Cascading Style Sheets</h2>
-    <img src="images/css-kid.jpg">
   </div>
   <hr>
   <div id="welcome">
-    <p>Welcome CSS noob. We're excited to have you here. Today we'll be walking through learning CSS. It's going to be awesome.
+    <p>Welcome! We're excited to have you here. Today, we'll be walking through learning CSS. It's going to be awesome.
     </p>
   </div>
   <hr>
   <div class="info-section">
-    <h3>What is CSS?</h3>
-    <p>CSS stands for Cascading Style Sheets. We use CSS to apply style and formatting to websites. It's a best practice as a programmer to keep <em>content</em> and <em>styling</em> separate. That way we can keep our files simple and also allow for different webpages to have the same styling! Imagine if every time the New York Times had to publish an article they had to re-do the look of the entire newspaper!</p>
+    <h3>What is CSS again?</h3>
+    <p>CSS stands for Cascading Style Sheets. We use CSS to apply style and formatting to websites. It is a good practice as a programmer to keep <em>content</em> and <em>styling</em> separate. It helps keep our code organized, easy to read, and reuseble. CSS written for one page can be linked by multiple pages.  Different pages on a website can share a local file, often stored in a CSS subfolder. Different websites can even share CSS that is hosted remotely and accessed when a page loads.</p>
+  </div>
+  <hr>
+  <div class="info-section">
+    <h3>Tell me about CSS Syntax...</h3>
+    <p>CSS syntax is very consistent, regardless of what you're styling. The selector chooses the element whose formatting you want to change, in this example, all h1 tags. The declaration explains how to change selected the element.  Here, all h1 tags will have their text changed to blue and the font size set at 12 pixels.</p>
+    <img src="images/selector.gif">
+    <p>Make sure to add those semi-colons to the end of each declaration!  You can have as many declarations as you like for each selector.</p>
+    <p>It is possible to not only turn all h1 elements blue, but also make them to different fonts and sizes, give them borders, turn them upside-down, add them 3d effects, and even animate them! </p>
   </div>
   <hr>
   <div class="info-section">
     <h3>What Can I change Using CSS?</h3>
     <ul>
-      <li>Font type</li>
-      <li>Text sizes</li>
-      <li>Backgrounds</li>
-      <li>Borders</li>
-      <li>Page Layout</li>
-      <li>Margins</li>
-      <li>Image sizes</li>
-      <li>Rounding edges</li>
-      <li>LOTS MORE...</li>
+      <li class="font-style">Font style</li>
+      <li class="text-size">Text size</li>
+      <li class="background">Background</li>
+      <li class="borders">Borders</li>
+      <li class="page-layout">Page Layout (like this grid of examples!)</li>
+      <li class="margins">Margins</li>
+      <li class="rounding-edges">Rounding edges</li>
+      <li class="more">LOTS MORE...</li>
     </ul>
   </div>
   <hr>
   <div class="info-section">
-    <h3> Tell me about CSS Syntax... </h3>
-    <p> CSS syntax is pretty straightforward. The selector chooses the element whose formatting you want to change. The declaration explains how to change the element</p>
-    <img src="images/selector.gif">
-  </div>
-  <hr>
-  <div class="info-section">
-    <h3>How do we get CSS to affect HTML</h3>
-    <p> You need to create a CSS stylesheet and link to it in your HTML file. Your link should be in the 'head' section of the html and should look something like this:<br>
-     &#60link rel="stylesheet" type="text/css" href="path_to_stylesheet"&#62
+    <h3>How do we get get started on combining CSS HTML?</h3>
+    <p> The first thing you need to do is create a CSS stylesheet and link to it in your HTML file. Your link should be in the 'head' section of the html in this page and should look something like this:<br>
+     <pre>&#60link rel="stylesheet" type="text/css" href="path_to_stylesheet"&#62</pre>
     <br>
-    Do this now.
+    There is a provided style.css file inside of the css folder in this code along. Go ahead and add a link tag to index.html in the 'head' section. The href should be set to "css/style.css"
     </p>
   </div>
   <hr>
   <div class="info-section">
-    <h3> What does the "Cascades" in CSS mean? </h3>
-    <p> If we look at the HTML of a page, we can see that elements are embedded within other elements. For example, in this page the h1 header is embedded within the 'body' element of this page, which is embedded in the 'html' element. Imagine a big family tree. Now, back to cascades: When we change the formatting of a specific element, that cange will <em>cascade</em> down to 
+    <h3> Write your first CSS Declarations </h3>
+    <p> Now that style.css is linked to this webpage, we can start seeing some results when we style. Go into style.css, and add the following:</p>
+    <pre>
+    body {
+      background-color: lightblue;
+      font-size: 150%;
+    }
+    </pre>
+    <p>Save the file and refresh this page.  Whoa! The white background should now be a nice color and all our text is bigger!</p>
     <hr>
   </div>
-  <h3>What are these things we call classes and ids?</h3>
-  <p id="about-classes-and-ids">Sometimes we have to get more granular than what the tags in our html can provide us. For example, we only want to convert one of our h3 headings to a different color. If we change the css of h3s, the will all change. So we add classes and/or ids. Classes and ids are 'markers' that we put in our HTML so that we can reference them in our CSS stylesheets. An id can only be used once in a page, but a class can be used multiple times. In our stylesheets, ids are referenced with a '#' and classes are referenced with a '.'.
+  <hr>
+  <h3>Curious! Everything got bigger!</h3>
+  <p>Feel free to set font-sizes back to normal. We set a font-size using the body tag, but did you notice that EVERYTHING got bigger? All the text on this page is inside 'p' and 'div' tags.</p>
+  <p>Because the 'body' tag contains all the 'p' tags and all the 'div' tags, some values we set, like font-size, will trickle down to the elements inside</p>
+  <hr>
+  <h3>What are classes and ids?</h3>
+  <p id="about-classes-and-ids">Selecting by tag like we just did works well when we are making changes to every instance of a tag (all 'h1', all 'p' tags, etc..).</p>
+  <p>Sometimes, we want only <em>some</em> 'p' tags to look a certain way, or even one specific tag. In order to change specific elements, we use CSS classes and ids.</p>
+  <p>To implement a class, we will need to write a CSS block just like we did with 'body'.  For example:
+  <pre>
+    .myClass {
+      background-color: gray;
+      color: blue
+    }
+  </pre>
+  <p>To write declarations for a class, first decide on a name. Writing '.', then the name will let CSS know these are class declarations</p>
+  <p>To use this class, we just put it inside any HTML element we want, like so:</p>
+  <pre>
+    <h3 class="myClass">Example Header</h3>
+  </pre>
+  Now, just this one 'h3' element will have a gray background and blue text!
+
   </p>
 </body>
 </html>
