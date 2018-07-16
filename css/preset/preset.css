@@ -26,9 +26,9 @@ li {
 .background {
   background: linear-gradient(red, yellow);
 }
-.borders {
-  border: 3px dashed red;
-}
+/*.borders {*/
+/*  border: 20px dashed red;*/
+/*}*/
 .page-layout {
   display: flex;
   flex-flow: column;

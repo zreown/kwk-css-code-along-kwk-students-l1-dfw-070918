@@ -1,1 +1,17 @@
 /* add CSS class and element and selectors here */
+body {
+ background-color: pink;
+ font-size: 300%;
+ color: white
+}
+.myClass {
+     background-color: black;
+     color: white
+}
+    
+.borders {
+  border: 20px groove black;
+  
+  
+   
+}
